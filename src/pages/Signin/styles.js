@@ -27,6 +27,9 @@ export const Label = styled.label`
   font-size: 18px;
   font-weight: 600;
   color: #000000;
+  margin-bottom: 70px;
+  margin-top: 50px;
+  font-size: 30px;
 `;
 
 export const LabelSignup = styled.label`
@@ -46,4 +49,8 @@ export const Strong = styled.strong`
     text-decoration: none;
     color: #676767;
   }
+`;
+
+export const Final = styled.label`
+  margin-top: 120px;
 `;

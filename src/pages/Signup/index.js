@@ -6,6 +6,8 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Signup = () => {
+
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [emailConf, setEmailConf] = useState("");
   const [senha, setSenha] = useState("");
@@ -15,7 +17,7 @@ const Signup = () => {
   const { signup } = useAuth();
 
   const handleSignup = () => {
-    if (!email | !emailConf | !senha) {
+    if (!name | !email | !emailConf | !senha) {
       setError("Preencha todos os campos");
       return;
     } else if (email !== emailConf) {
@@ -23,7 +25,7 @@ const Signup = () => {
       return;
     }
 
-    const res = signup(email, senha);
+    const res = signup(name, email, senha);
 
     if (res) {
       setError(res);
@@ -38,6 +40,12 @@ const Signup = () => {
     <C.Container>
       <C.Label>SISTEMA DE LOGIN</C.Label>
       <C.Content>
+        <Input 
+          type="name"
+          placeholder="Digite seu nome"
+          value={name}
+          onChange={(e) => [setName(e.target.value), setError("")]}
+        />
         <Input
           type="email"
           placeholder="Digite seu E-mail"
