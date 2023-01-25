@@ -26,7 +26,10 @@ export const Content = styled.div`
 export const Label = styled.label`
   font-size: 18px;
   font-weight: 600;
-  color: #676767;
+  color: #000000;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 30px;
 `;
 
 export const LabelSignin = styled.label`
@@ -46,4 +49,8 @@ export const Strong = styled.strong`
     text-decoration: none;
     color: #676767;
   }
+`;
+
+export const Final = styled.label`
+  margin-top: 80px;
 `;

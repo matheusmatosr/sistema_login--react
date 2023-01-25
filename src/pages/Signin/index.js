@@ -6,20 +6,21 @@ import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 const Signin = () => {
+
   const { signin } = useAuth();
   const navigate = useNavigate();
-
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const [error, setError] = useState("");
-  const name = '@ Desenvolvido por Matheus Matos';
+
   const handleLogin = () => {
-    if (!email | !senha) {
+    if (!email | !senha | !name) {
       setError("Preencha todos os campos");
       return;
     }
 
-    const res = signin(email, senha);
+    const res = signin(name, email, senha);
 
     if (res) {
       setError(res);
@@ -33,6 +34,12 @@ const Signin = () => {
     <C.Container>
       <C.Label>SISTEMA DE LOGIN</C.Label>
       <C.Content>
+        <Input
+          type="name"
+          placeholder="Digite seu nome"
+          value={name}
+          onChange={(e) => [setName(e.target.value), setError("")]}
+        />
         <Input
           type="email"
           placeholder="Digite seu E-mail"
@@ -54,7 +61,7 @@ const Signin = () => {
           </C.Strong>
         </C.LabelSignup>
       </C.Content>
-      <>@ Desenvolvido por Matheus Matos</>
+      <C.Final>@ 2023 by <a href="https://www.linkedin.com/in/matheus-matos-1a523221b/">Matheus Matos</a></C.Final>
     </C.Container>
   );
 };
