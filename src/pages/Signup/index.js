@@ -38,7 +38,7 @@ const Signup = () => {
 
   return (
     <C.Container>
-      <C.Label>SISTEMA DE LOGIN</C.Label>
+      <C.Label>SISTEMA DE REGISTRO</C.Label>
       <C.Content>
         <Input 
           type="name"
@@ -73,6 +73,7 @@ const Signup = () => {
           </C.Strong>
         </C.LabelSignin>
       </C.Content>
+      <C.Final>@ 2022 by <a href="https://www.linkedin.com/in/matheus-matos-1a523221b/">Matheus Matos</a></C.Final>
     </C.Container>
   );
 };
