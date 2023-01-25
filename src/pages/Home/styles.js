@@ -12,24 +12,28 @@ export const Container = styled.div`
 export const Title = styled.h2`
   font-size: 50px;
   margin-top: 0px;
-  margin-bottom: 0px;
+  padding-top: 0px;
+  margin-bottom: 25px;
 `;
 
 export const Info = styled.h2`
-  display: grid;
   text-align: justify;
   width: 350px;
   height: 250px;
-  margin-top: 0px;
-  margin-bottom: 50px;
+  margin-top: -170px;
+  margin-bottom: 70px;
+  margin-right: -400px;
 `;
 
 export const Eu = styled.h2`
-  display: grid;
   text-align: justify;
   width: 350px;
   height: 250px;
-  margin-left: 0px;
-  margin-top: 50px;
+  margin-right: 400px;
+  margin-top: 30px;
   margin-bottom: -100px;
+`;
+
+export const Final = styled.label`
+  margin-top: 75px;
 `;

@@ -61,7 +61,7 @@ const Signin = () => {
           </C.Strong>
         </C.LabelSignup>
       </C.Content>
-      <C.Final>@ 2022 by <a href="https://www.linkedin.com/in/matheus-matos-1a523221b/">Matheus Matos</a></C.Final>
+      <C.Final>@ 2023 by <a href="https://www.linkedin.com/in/matheus-matos-1a523221b/">Matheus Matos</a></C.Final>
     </C.Container>
   );
 };
