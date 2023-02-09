@@ -17,21 +17,12 @@ export const Title = styled.h2`
 `;
 
 export const Info = styled.h2`
-  text-align: justify;
+  text-align: center;
   width: 350px;
   height: 250px;
-  margin-top: -170px;
+  margin-top: 35px;
   margin-bottom: 70px;
-  margin-right: -400px;
-`;
-
-export const Eu = styled.h2`
   text-align: justify;
-  width: 350px;
-  height: 250px;
-  margin-right: 400px;
-  margin-top: 30px;
-  margin-bottom: -100px;
 `;
 
 export const Final = styled.label`

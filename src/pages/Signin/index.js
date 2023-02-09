@@ -4,6 +4,7 @@ import Button from "../../components/Button";
 import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { toast } from 'react-toastify';
 
 const Signin = () => {
 
@@ -17,6 +18,13 @@ const Signin = () => {
   const handleLogin = () => {
     if (!email | !senha | !name) {
       setError("Preencha todos os campos");
+      toast.warn("Foi detectado campos vazios!");
+      return;
+    }
+
+    if (email === name){
+      setError("Não é permitido campos iguais");
+      toast.warn("Foi detectado campos semelhantes!")
       return;
     }
 
@@ -27,6 +35,7 @@ const Signin = () => {
       return;
     }
 
+    toast.success("Login efetuado com sucesso!");
     navigate("/home");
   };
 
