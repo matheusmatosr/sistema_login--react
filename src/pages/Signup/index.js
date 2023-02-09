@@ -4,6 +4,7 @@ import Button from "../../components/Button";
 import * as C from "./styles";
 import { Link, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import { toast } from 'react-toastify';
 
 const Signup = () => {
 
@@ -19,9 +20,11 @@ const Signup = () => {
   const handleSignup = () => {
     if (!name | !email | !emailConf | !senha) {
       setError("Preencha todos os campos");
+      toast.warn("Foi detectado campos vaios");
       return;
     } else if (email !== emailConf) {
       setError("Os e-mails não são iguais");
+      toast.warn("Foi detectado erro no campo do email!");
       return;
     }
 
@@ -32,7 +35,7 @@ const Signup = () => {
       return;
     }
 
-    alert("Usuário cadatrado com sucesso!");
+    toast.success("Usuário cadatrado com sucesso!");
     navigate("/");
   };
 
