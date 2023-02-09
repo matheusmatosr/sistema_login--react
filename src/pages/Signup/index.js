@@ -28,6 +28,12 @@ const Signup = () => {
       return;
     }
 
+    if (email === name) {
+      setError("Não é permitido campos iguais");
+      toast.warn("Foi detectado campos semelhantes!");
+      return;
+    }
+
     const res = signup(name, email, senha);
 
     if (res) {
