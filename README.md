@@ -7,6 +7,6 @@ Para rodar o projeto, siga o tutorial abaixo.
 Abra o terminal e faça os seguintes códigos:
 
 - yarn install
-- yarn run dev
+- yarn run start
 
 Acesse o link que aparecerá no terminal para obter acesso ao projeto.
