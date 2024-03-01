@@ -2,7 +2,7 @@
 
 Projeto consiste em um sistema de login, no qual você precisa de cadastrar para depois logar e acessar a página Inicial.
 
-Para rodar o projeto, siga o tutorial abaixo.
+## Para rodar o projeto, siga o tutorial abaixo.
 
 Abra o terminal e faça os seguintes códigos:
 
