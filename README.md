@@ -8,7 +8,7 @@ Projeto consiste em um sistema de login, no qual você precisa de cadastrar para
 
 1. Clone este repositório
 ```bash
-git clone https://github.com/matheusmatosr/blog.git
+git clone https://github.com/matheusmatosr/sistema_login--react.git
 ```
 
 Abra o terminal e faça os seguintes códigos:
